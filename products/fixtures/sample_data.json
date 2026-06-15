@@ -1,0 +1,577 @@
+[
+{
+  "model": "products.category",
+  "pk": 1,
+  "fields": {
+    "created_at": "2026-06-15T05:07:00.503Z",
+    "updated_at": "2026-06-15T05:07:00.503Z",
+    "name": "Lighting",
+    "slug": "lighting",
+    "description": "Bulbs, fixtures, and LED lighting."
+  }
+},
+{
+  "model": "products.category",
+  "pk": 2,
+  "fields": {
+    "created_at": "2026-06-15T05:07:00.505Z",
+    "updated_at": "2026-06-15T05:07:00.505Z",
+    "name": "Wire & Cable",
+    "slug": "wire-cable",
+    "description": "Building wire, cable, and conductors."
+  }
+},
+{
+  "model": "products.category",
+  "pk": 3,
+  "fields": {
+    "created_at": "2026-06-15T05:07:00.506Z",
+    "updated_at": "2026-06-15T05:07:00.506Z",
+    "name": "Conduit & Fittings",
+    "slug": "conduit-fittings",
+    "description": "Conduit, tubing, and connectors."
+  }
+},
+{
+  "model": "products.category",
+  "pk": 4,
+  "fields": {
+    "created_at": "2026-06-15T05:07:00.506Z",
+    "updated_at": "2026-06-15T05:07:00.506Z",
+    "name": "Boxes & Enclosures",
+    "slug": "boxes-enclosures",
+    "description": "Junction boxes and enclosures."
+  }
+},
+{
+  "model": "products.category",
+  "pk": 5,
+  "fields": {
+    "created_at": "2026-06-15T05:07:00.507Z",
+    "updated_at": "2026-06-15T05:07:00.507Z",
+    "name": "Tools",
+    "slug": "tools",
+    "description": "Hand tools and test equipment."
+  }
+},
+{
+  "model": "products.category",
+  "pk": 6,
+  "fields": {
+    "created_at": "2026-06-15T05:07:00.507Z",
+    "updated_at": "2026-06-15T05:07:00.507Z",
+    "name": "Safety",
+    "slug": "safety",
+    "description": "Personal protective equipment."
+  }
+},
+{
+  "model": "products.tag",
+  "pk": 1,
+  "fields": {
+    "created_at": "2026-06-15T05:07:00.508Z",
+    "updated_at": "2026-06-15T05:07:00.508Z",
+    "name": "Indoor",
+    "slug": "indoor"
+  }
+},
+{
+  "model": "products.tag",
+  "pk": 2,
+  "fields": {
+    "created_at": "2026-06-15T05:07:00.509Z",
+    "updated_at": "2026-06-15T05:07:00.509Z",
+    "name": "Outdoor",
+    "slug": "outdoor"
+  }
+},
+{
+  "model": "products.tag",
+  "pk": 3,
+  "fields": {
+    "created_at": "2026-06-15T05:07:00.509Z",
+    "updated_at": "2026-06-15T05:07:00.509Z",
+    "name": "Weatherproof",
+    "slug": "weatherproof"
+  }
+},
+{
+  "model": "products.tag",
+  "pk": 4,
+  "fields": {
+    "created_at": "2026-06-15T05:07:00.510Z",
+    "updated_at": "2026-06-15T05:07:00.510Z",
+    "name": "LED",
+    "slug": "led"
+  }
+},
+{
+  "model": "products.tag",
+  "pk": 5,
+  "fields": {
+    "created_at": "2026-06-15T05:07:00.510Z",
+    "updated_at": "2026-06-15T05:07:00.510Z",
+    "name": "Copper",
+    "slug": "copper"
+  }
+},
+{
+  "model": "products.tag",
+  "pk": 6,
+  "fields": {
+    "created_at": "2026-06-15T05:07:00.511Z",
+    "updated_at": "2026-06-15T05:07:00.511Z",
+    "name": "Aluminum",
+    "slug": "aluminum"
+  }
+},
+{
+  "model": "products.tag",
+  "pk": 7,
+  "fields": {
+    "created_at": "2026-06-15T05:07:00.511Z",
+    "updated_at": "2026-06-15T05:07:00.511Z",
+    "name": "Heavy Duty",
+    "slug": "heavy-duty"
+  }
+},
+{
+  "model": "products.tag",
+  "pk": 8,
+  "fields": {
+    "created_at": "2026-06-15T05:07:00.512Z",
+    "updated_at": "2026-06-15T05:07:00.512Z",
+    "name": "Residential",
+    "slug": "residential"
+  }
+},
+{
+  "model": "products.tag",
+  "pk": 9,
+  "fields": {
+    "created_at": "2026-06-15T05:07:00.512Z",
+    "updated_at": "2026-06-15T05:07:00.512Z",
+    "name": "Commercial",
+    "slug": "commercial"
+  }
+},
+{
+  "model": "products.tag",
+  "pk": 10,
+  "fields": {
+    "created_at": "2026-06-15T05:07:00.513Z",
+    "updated_at": "2026-06-15T05:07:00.513Z",
+    "name": "Sale",
+    "slug": "sale"
+  }
+},
+{
+  "model": "products.tag",
+  "pk": 11,
+  "fields": {
+    "created_at": "2026-06-15T05:07:00.514Z",
+    "updated_at": "2026-06-15T05:07:00.514Z",
+    "name": "Energy Star",
+    "slug": "energy-star"
+  }
+},
+{
+  "model": "products.tag",
+  "pk": 12,
+  "fields": {
+    "created_at": "2026-06-15T05:07:00.514Z",
+    "updated_at": "2026-06-15T05:07:00.514Z",
+    "name": "Premium",
+    "slug": "premium"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 1,
+  "fields": {
+    "created_at": "2026-06-15T05:07:00.516Z",
+    "updated_at": "2026-06-15T05:07:00.516Z",
+    "product_number": "LED-A19-09",
+    "name": "LED A19 Bulb 9W",
+    "description": "Warm white dimmable LED bulb for residential fixtures.",
+    "price": "4.99",
+    "category": 1,
+    "tags": [
+      11,
+      1,
+      4,
+      8
+    ]
+  }
+},
+{
+  "model": "products.product",
+  "pk": 2,
+  "fields": {
+    "created_at": "2026-06-15T05:07:00.518Z",
+    "updated_at": "2026-06-15T05:07:00.518Z",
+    "product_number": "LED-FLOOD-30",
+    "name": "LED Flood Light 30W",
+    "description": "Outdoor weatherproof LED flood light with a wide beam.",
+    "price": "24.50",
+    "category": 1,
+    "tags": [
+      9,
+      4,
+      2,
+      3
+    ]
+  }
+},
+{
+  "model": "products.product",
+  "pk": 3,
+  "fields": {
+    "created_at": "2026-06-15T05:07:00.519Z",
+    "updated_at": "2026-06-15T05:07:00.519Z",
+    "product_number": "TUBE-T8-18",
+    "name": "T8 LED Tube 18W",
+    "description": "Four foot T8 LED replacement tube for shop fixtures.",
+    "price": "8.75",
+    "category": 1,
+    "tags": [
+      9,
+      11,
+      1,
+      4
+    ]
+  }
+},
+{
+  "model": "products.product",
+  "pk": 4,
+  "fields": {
+    "created_at": "2026-06-15T05:07:00.520Z",
+    "updated_at": "2026-06-15T05:07:00.520Z",
+    "product_number": "HIGHBAY-150",
+    "name": "LED High Bay 150W",
+    "description": "Warehouse high bay fixture, 150 watt, daylight white.",
+    "price": "89.00",
+    "category": 1,
+    "tags": [
+      9,
+      7,
+      4
+    ]
+  }
+},
+{
+  "model": "products.product",
+  "pk": 5,
+  "fields": {
+    "created_at": "2026-06-15T05:07:00.522Z",
+    "updated_at": "2026-06-15T05:07:00.522Z",
+    "product_number": "THHN-12-BLK",
+    "name": "THHN Wire 12 AWG Black",
+    "description": "Stranded copper THHN building wire, 500 foot spool.",
+    "price": "95.00",
+    "category": 2,
+    "tags": [
+      5,
+      1,
+      8
+    ]
+  }
+},
+{
+  "model": "products.product",
+  "pk": 6,
+  "fields": {
+    "created_at": "2026-06-15T05:07:00.523Z",
+    "updated_at": "2026-06-15T05:07:00.523Z",
+    "product_number": "THHN-10-RED",
+    "name": "THHN Wire 10 AWG Red",
+    "description": "Stranded copper THHN building wire, 500 foot spool.",
+    "price": "142.00",
+    "category": 2,
+    "tags": [
+      9,
+      5,
+      1
+    ]
+  }
+},
+{
+  "model": "products.product",
+  "pk": 7,
+  "fields": {
+    "created_at": "2026-06-15T05:07:00.525Z",
+    "updated_at": "2026-06-15T05:07:00.525Z",
+    "product_number": "UF-12-2",
+    "name": "UF-B Cable 12/2",
+    "description": "Underground feeder cable for outdoor burial runs.",
+    "price": "168.00",
+    "category": 2,
+    "tags": [
+      5,
+      2,
+      3
+    ]
+  }
+},
+{
+  "model": "products.product",
+  "pk": 8,
+  "fields": {
+    "created_at": "2026-06-15T05:07:00.526Z",
+    "updated_at": "2026-06-15T05:07:00.526Z",
+    "product_number": "SER-2-2-4",
+    "name": "SER Aluminum 2-2-2-4",
+    "description": "Aluminum service entrance cable for panel feeds.",
+    "price": "210.00",
+    "category": 2,
+    "tags": [
+      6,
+      7,
+      2
+    ]
+  }
+},
+{
+  "model": "products.product",
+  "pk": 9,
+  "fields": {
+    "created_at": "2026-06-15T05:07:00.527Z",
+    "updated_at": "2026-06-15T05:07:00.527Z",
+    "product_number": "EMT-12-10",
+    "name": "EMT Conduit 1/2 inch",
+    "description": "Electrical metallic tubing, 10 foot stick.",
+    "price": "6.20",
+    "category": 3,
+    "tags": [
+      9,
+      1
+    ]
+  }
+},
+{
+  "model": "products.product",
+  "pk": 10,
+  "fields": {
+    "created_at": "2026-06-15T05:07:00.529Z",
+    "updated_at": "2026-06-15T05:07:00.529Z",
+    "product_number": "PVC-34-SCH40",
+    "name": "PVC Conduit 3/4 inch",
+    "description": "Schedule 40 PVC conduit for outdoor and burial use.",
+    "price": "4.85",
+    "category": 3,
+    "tags": [
+      2,
+      3
+    ]
+  }
+},
+{
+  "model": "products.product",
+  "pk": 11,
+  "fields": {
+    "created_at": "2026-06-15T05:07:00.530Z",
+    "updated_at": "2026-06-15T05:07:00.530Z",
+    "product_number": "CONN-EMT-12",
+    "name": "EMT Connector 1/2 inch",
+    "description": "Set screw connector for half inch EMT conduit.",
+    "price": "0.79",
+    "category": 3,
+    "tags": [
+      9,
+      1
+    ]
+  }
+},
+{
+  "model": "products.product",
+  "pk": 12,
+  "fields": {
+    "created_at": "2026-06-15T05:07:00.531Z",
+    "updated_at": "2026-06-15T05:07:00.531Z",
+    "product_number": "STRUT-12",
+    "name": "Strut Channel 12 ga",
+    "description": "Slotted galvanized strut channel, 10 foot, heavy gauge.",
+    "price": "18.40",
+    "category": 3,
+    "tags": [
+      9,
+      7,
+      1
+    ]
+  }
+},
+{
+  "model": "products.product",
+  "pk": 13,
+  "fields": {
+    "created_at": "2026-06-15T05:07:00.532Z",
+    "updated_at": "2026-06-15T05:07:00.532Z",
+    "product_number": "BOX-1G-METAL",
+    "name": "1-Gang Metal Box",
+    "description": "Single gang steel switch box, 3 inch deep.",
+    "price": "1.45",
+    "category": 4,
+    "tags": [
+      1,
+      8
+    ]
+  }
+},
+{
+  "model": "products.product",
+  "pk": 14,
+  "fields": {
+    "created_at": "2026-06-15T05:07:00.534Z",
+    "updated_at": "2026-06-15T05:07:00.534Z",
+    "product_number": "BOX-WP-2G",
+    "name": "Weatherproof 2-Gang Box",
+    "description": "Outdoor weatherproof box with a foam gasket.",
+    "price": "7.95",
+    "category": 4,
+    "tags": [
+      9,
+      2,
+      3
+    ]
+  }
+},
+{
+  "model": "products.product",
+  "pk": 15,
+  "fields": {
+    "created_at": "2026-06-15T05:07:00.535Z",
+    "updated_at": "2026-06-15T05:07:00.535Z",
+    "product_number": "NEMA-12-ENC",
+    "name": "NEMA 12 Enclosure",
+    "description": "Industrial wall mount enclosure, powder coated steel.",
+    "price": "64.00",
+    "category": 4,
+    "tags": [
+      9,
+      7,
+      1
+    ]
+  }
+},
+{
+  "model": "products.product",
+  "pk": 16,
+  "fields": {
+    "created_at": "2026-06-15T05:07:00.537Z",
+    "updated_at": "2026-06-15T05:07:00.537Z",
+    "product_number": "JBOX-4SQ",
+    "name": "4 inch Square Box",
+    "description": "Steel 4 square junction box, 1-1/2 inch deep.",
+    "price": "2.10",
+    "category": 4,
+    "tags": [
+      9,
+      1
+    ]
+  }
+},
+{
+  "model": "products.product",
+  "pk": 17,
+  "fields": {
+    "created_at": "2026-06-15T05:07:00.538Z",
+    "updated_at": "2026-06-15T05:07:00.538Z",
+    "product_number": "PLIER-LINE-9",
+    "name": "Lineman Pliers 9 inch",
+    "description": "High leverage side cutting lineman pliers.",
+    "price": "32.00",
+    "category": 5,
+    "tags": [
+      7,
+      12
+    ]
+  }
+},
+{
+  "model": "products.product",
+  "pk": 18,
+  "fields": {
+    "created_at": "2026-06-15T05:07:00.540Z",
+    "updated_at": "2026-06-15T05:07:00.540Z",
+    "product_number": "STRIP-AUTO",
+    "name": "Automatic Wire Stripper",
+    "description": "Self adjusting wire stripper for 10 to 24 AWG.",
+    "price": "27.50",
+    "category": 5,
+    "tags": [
+      12,
+      10
+    ]
+  }
+},
+{
+  "model": "products.product",
+  "pk": 19,
+  "fields": {
+    "created_at": "2026-06-15T05:07:00.541Z",
+    "updated_at": "2026-06-15T05:07:00.541Z",
+    "product_number": "MTR-CLAMP",
+    "name": "Clamp Meter 600A",
+    "description": "True RMS AC and DC clamp meter with temperature.",
+    "price": "79.99",
+    "category": 5,
+    "tags": [
+      9,
+      12
+    ]
+  }
+},
+{
+  "model": "products.product",
+  "pk": 20,
+  "fields": {
+    "created_at": "2026-06-15T05:07:00.543Z",
+    "updated_at": "2026-06-15T05:07:00.543Z",
+    "product_number": "TAPE-FISH-100",
+    "name": "Fish Tape 100 ft",
+    "description": "Steel fish tape for pulling wire through conduit.",
+    "price": "21.00",
+    "category": 5,
+    "tags": [
+      7
+    ]
+  }
+},
+{
+  "model": "products.product",
+  "pk": 21,
+  "fields": {
+    "created_at": "2026-06-15T05:07:00.544Z",
+    "updated_at": "2026-06-15T05:07:00.544Z",
+    "product_number": "GLOVE-CLASS0",
+    "name": "Insulated Gloves Class 0",
+    "description": "Rubber insulating gloves rated 1000V, class 0.",
+    "price": "58.00",
+    "category": 6,
+    "tags": [
+      9,
+      7,
+      12
+    ]
+  }
+},
+{
+  "model": "products.product",
+  "pk": 22,
+  "fields": {
+    "created_at": "2026-06-15T05:07:00.545Z",
+    "updated_at": "2026-06-15T05:07:00.545Z",
+    "product_number": "GLASS-SAFE",
+    "name": "Safety Glasses Clear",
+    "description": "Anti fog clear safety glasses, ANSI Z87 rated.",
+    "price": "3.25",
+    "category": 6,
+    "tags": [
+      9,
+      8,
+      10
+    ]
+  }
+}
+]
