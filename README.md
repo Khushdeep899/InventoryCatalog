@@ -3,7 +3,8 @@
 A small Django catalog of products, categories, and tags with a search and filter
 page. Search matches a product name or description, results can be filtered by
 category and by one or more tags (a product must carry every selected tag), and all
-of these combine. A read-only JSON endpoint exposes the same filtered data.
+of these combine. A read-only JSON endpoint exposes the same filtered data, and a
+management command ingests supplier price files (CSV) into the catalog.
 
 ## Tech stack
 
@@ -43,7 +44,8 @@ python manage.py test
 - **Category**: a grouping for products. A product belongs to at most one category.
 - **Tag**: a label that can be applied to many products.
 - **Product**: a catalog item with a unique `product_number` (its natural key), a
-  name, a description, a price, one optional category, and many tags.
+  name, a description, a price, a stock status (in stock, backorder, or
+  discontinued), one optional category, and many tags.
 
 Deleting a category sets its products' category to null (`on_delete=SET_NULL`)
 rather than deleting the products, so catalog entries are never lost when a
@@ -63,6 +65,21 @@ category is removed.
 The HTML view and the JSON API share a single `filtered_products` helper, so both
 apply identical filtering.
 
+## Importing a supplier price file
+
+A management command ingests a supplier price file (CSV) into the catalog:
+
+```bash
+python manage.py import_catalog sample_data/supplier_pricefile.csv
+```
+
+The import is idempotent on `product_number`: re-running the same file updates
+products in place instead of creating duplicates, so a re-sent feed never doubles
+the catalog. Categories and tags named in the feed are created on demand (tags are
+pipe-delimited, for example `LED|Outdoor|Sale`), a malformed row is skipped and
+reported instead of failing the whole batch, and the command prints a
+`created/updated/skipped` summary at the end.
+
 ## Configuration
 
 Settings read from environment variables with development fallbacks, so no real
@@ -73,7 +90,9 @@ secret is committed. See `.env.example`. For production set `DJANGO_SECRET_KEY`,
 
 - Sample data was created through the Django admin and exported as a fixture
   (`products/fixtures/sample_data.json`) so the project ships with reproducible
-  data that loads in one command.
+  data that loads in one command. The same catalog can also be ingested from the
+  sample supplier price file with
+  `python manage.py import_catalog sample_data/supplier_pricefile.csv`.
 - Slugs for categories and tags are generated from the name on save. Two names that
   slugify to the same value would collide on the unique constraint; a production
   version would append a numeric suffix.
