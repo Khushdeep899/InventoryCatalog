@@ -19,8 +19,15 @@ class TagAdmin(admin.ModelAdmin):
 
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
-    list_display = ("product_number", "name", "category", "price", "created_at")
-    list_filter = ("category", "tags")
+    list_display = (
+        "product_number",
+        "name",
+        "category",
+        "price",
+        "stock_status",
+        "created_at",
+    )
+    list_filter = ("category", "tags", "stock_status")
     search_fields = ("product_number", "name", "description")
     filter_horizontal = ("tags",)
     list_select_related = ("category",)  # avoids one extra query per changelist row

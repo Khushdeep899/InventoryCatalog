@@ -61,6 +61,11 @@ class Tag(TimeStampedModel):
 class Product(TimeStampedModel):
     """A catalog item with a unique product number, one category, and many tags."""
 
+    class StockStatus(models.TextChoices):
+        IN_STOCK = "IN", "In stock"
+        BACKORDER = "BO", "Backorder"
+        DISCONTINUED = "DC", "Discontinued"
+
     product_number = models.CharField(
         max_length=40,
         unique=True,  # unique already builds an index, so no separate db_index
@@ -69,6 +74,12 @@ class Product(TimeStampedModel):
     name = models.CharField(max_length=200, db_index=True)  # searched and ordered on
     description = models.TextField(help_text="Description of the product.")
     price = models.DecimalField(max_digits=10, decimal_places=2)
+    stock_status = models.CharField(
+        max_length=2,
+        choices=StockStatus.choices,
+        default=StockStatus.IN_STOCK,
+        help_text="Availability from the supplier stock file.",
+    )
     # category deletion allowed, but put a product's category_id sets to NULL.
     category = models.ForeignKey(
         Category,

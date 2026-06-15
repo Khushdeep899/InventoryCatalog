@@ -76,6 +76,7 @@ def product_api(request):
             "name": product.name,
             "description": product.description,
             "price": str(product.price),
+            "stock_status": product.get_stock_status_display(),
             "category": product.category.name if product.category else None,
             "tags": [tag.name for tag in product.tags.all()],
         }

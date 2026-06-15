@@ -54,6 +54,7 @@
   <span class="product-number">({{ product.product_number }})</span>
   <div>${{ product.price|floatformat:2 }}
     {% if product.category %} in {{ product.category.name }}{% endif %}
+    <span class="stock">{{ product.get_stock_status_display }}</span>
   </div>
   <p>{{ product.description }}</p>
   <div class="badges">
