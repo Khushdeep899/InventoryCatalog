@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+
+{% block title %}Product Catalog{% endblock title %}
+
+{% block content %}
+<h1>Product Catalog</h1>
+
+{# GET so the active filters stay in the URL and survive a refresh or a shared link #}
+<form method="get" class="filters">
+  <fieldset>
+    <legend>Search</legend>
+    <input type="text" name="search" value="{{ search }}"
+           placeholder="name or description">
+  </fieldset>
+
+  <fieldset>
+    <legend>Category</legend>
+    <select name="category">
+      <option value="">All categories</option>
+      {% for category in categories %}
+      {# selected_category comes from the query string as text, so cast the id to compare #}
+      <option value="{{ category.id }}"
+              {% if category.id|stringformat:"s" == selected_category %}selected{% endif %}>
+        {{ category.name }}
+      </option>
+      {% endfor %}
+    </select>
+  </fieldset>
+
+  <fieldset class="tag-list">
+    <legend>Tags (match all)</legend>
+    {% for tag in tags %}
+    <label>
+      {# keep this box checked when its id is one of the submitted tag ids #}
+      <input type="checkbox" name="tags" value="{{ tag.id }}"
+             {% if tag.id|stringformat:"s" in selected_tags %}checked{% endif %}>
+      {{ tag.name }}
+    </label>
+    {% endfor %}
+  </fieldset>
+
+  <div class="actions">
+    <button type="submit">Apply</button>
+    <a href="{% url 'products:product_list' %}">Reset</a>
+  </div>
+</form>
+
+<p class="count">{{ result_count }} product{{ result_count|pluralize }} found</p>
+
+{# page_obj holds only the current page of products, not the full result set #}
+{% for product in page_obj %}
+<div class="product">
+  <strong>{{ product.name }}</strong>
+  <span class="product-number">({{ product.product_number }})</span>
+  <div>${{ product.price|floatformat:2 }}
+    {% if product.category %} in {{ product.category.name }}{% endif %}
+  </div>
+  <p>{{ product.description }}</p>
+  <div class="badges">
+    {% for tag in product.tags.all %}
+    <span class="badge">{{ tag.name }}</span>
+    {% endfor %}
+  </div>
+</div>
+{% empty %}
+<p>No products match these filters.</p>
+{% endfor %}
+
+{% if page_obj.has_other_pages %}
+<div class="pagination">
+  {# re-attach the current filters to each link so paging does not clear them #}
+  {% if page_obj.has_previous %}
+  <a href="?page={{ page_obj.previous_page_number }}{% if querystring %}&{{ querystring }}{% endif %}">Previous</a>
+  {% endif %}
+  <span>Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}</span>
+  {% if page_obj.has_next %}
+  <a href="?page={{ page_obj.next_page_number }}{% if querystring %}&{{ querystring }}{% endif %}">Next</a>
+  {% endif %}
+</div>
+{% endif %}
+{% endblock content %}

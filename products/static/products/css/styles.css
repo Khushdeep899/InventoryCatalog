@@ -1,0 +1,71 @@
+body {
+  font-family: system-ui, sans-serif;
+  margin: 2rem;
+  color: #1a1a1a;
+}
+
+h1 {
+  margin-bottom: 1rem;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: flex-start;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.filters fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.filters legend {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.tag-list label {
+  display: block;
+  font-weight: normal;
+}
+
+.actions {
+  margin-top: 1rem;
+}
+
+.count {
+  color: #555;
+  margin: 1rem 0;
+}
+
+.product {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.product .product-number {
+  color: #888;
+  font-size: 0.85rem;
+}
+
+.product .badges {
+  margin-top: 0.25rem;
+}
+
+.badge {
+  display: inline-block;
+  background: #eef;
+  border-radius: 4px;
+  padding: 0.1rem 0.5rem;
+  font-size: 0.8rem;
+  margin-right: 0.25rem;
+}
+
+.pagination {
+  margin-top: 1.5rem;
+}
