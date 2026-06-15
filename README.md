@@ -7,6 +7,12 @@ all the tags you pick), and use those together.
 > Beyond what the assignment required, I also added a read-only JSON endpoint and a
 > CSV import command. Those two are extras, not part of the spec.
 
+## Live demo
+
+It's running at https://khusdeep899.pythonanywhere.com/. The admin is at
+https://khusdeep899.pythonanywhere.com/admin/, log in with `admin` / `admin12345`.
+It has the same sample data that ships in this repo.
+
 ## Stack
 
 - Python 3.12
