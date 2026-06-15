@@ -13,6 +13,10 @@ It's running at https://khusdeep899.pythonanywhere.com/. The admin is at
 https://khusdeep899.pythonanywhere.com/admin/, log in with `admin` / `admin12345`.
 It has the same sample data that ships in this repo.
 
+## Architecture
+
+![Architecture diagram](docs/architecture.drawio.png)
+
 ## Stack
 
 - Python 3.12
