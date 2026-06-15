@@ -1,0 +1,23 @@
+product_number,name,description,price,category,tags,stock_status
+LED-A19-09,LED A19 Bulb 9W,Warm white dimmable LED bulb for residential fixtures.,4.99,Lighting,LED|Indoor|Residential|Energy Star,IN
+LED-FLOOD-30,LED Flood Light 30W,Outdoor weatherproof LED flood light with a wide beam.,24.50,Lighting,LED|Outdoor|Weatherproof|Commercial,IN
+TUBE-T8-18,T8 LED Tube 18W,Four foot T8 LED replacement tube for shop fixtures.,8.75,Lighting,LED|Indoor|Commercial|Energy Star,DC
+HIGHBAY-150,LED High Bay 150W,"Warehouse high bay fixture, 150 watt, daylight white.",89.00,Lighting,LED|Commercial|Heavy Duty,BO
+THHN-12-BLK,THHN Wire 12 AWG Black,"Stranded copper THHN building wire, 500 foot spool.",95.00,Wire & Cable,Copper|Indoor|Residential,IN
+THHN-10-RED,THHN Wire 10 AWG Red,"Stranded copper THHN building wire, 500 foot spool.",142.00,Wire & Cable,Copper|Indoor|Commercial,IN
+UF-12-2,UF-B Cable 12/2,Underground feeder cable for outdoor burial runs.,168.00,Wire & Cable,Copper|Outdoor|Weatherproof,IN
+SER-2-2-4,SER Aluminum 2-2-2-4,Aluminum service entrance cable for panel feeds.,210.00,Wire & Cable,Aluminum|Outdoor|Heavy Duty,BO
+EMT-12-10,EMT Conduit 1/2 inch,"Electrical metallic tubing, 10 foot stick.",6.20,Conduit & Fittings,Indoor|Commercial,IN
+PVC-34-SCH40,PVC Conduit 3/4 inch,Schedule 40 PVC conduit for outdoor and burial use.,4.85,Conduit & Fittings,Outdoor|Weatherproof,IN
+CONN-EMT-12,EMT Connector 1/2 inch,Set screw connector for half inch EMT conduit.,0.79,Conduit & Fittings,Indoor|Commercial,IN
+STRUT-12,Strut Channel 12 ga,"Slotted galvanized strut channel, 10 foot, heavy gauge.",18.40,Conduit & Fittings,Heavy Duty|Commercial|Indoor,IN
+BOX-1G-METAL,1-Gang Metal Box,"Single gang steel switch box, 3 inch deep.",1.45,Boxes & Enclosures,Indoor|Residential,IN
+BOX-WP-2G,Weatherproof 2-Gang Box,Outdoor weatherproof box with a foam gasket.,7.95,Boxes & Enclosures,Outdoor|Weatherproof|Commercial,IN
+NEMA-12-ENC,NEMA 12 Enclosure,"Industrial wall mount enclosure, powder coated steel.",64.00,Boxes & Enclosures,Heavy Duty|Commercial|Indoor,BO
+JBOX-4SQ,4 inch Square Box,"Steel 4 square junction box, 1-1/2 inch deep.",2.10,Boxes & Enclosures,Indoor|Commercial,DC
+PLIER-LINE-9,Lineman Pliers 9 inch,High leverage side cutting lineman pliers.,32.00,Tools,Premium|Heavy Duty,IN
+STRIP-AUTO,Automatic Wire Stripper,Self adjusting wire stripper for 10 to 24 AWG.,27.50,Tools,Premium|Sale,IN
+MTR-CLAMP,Clamp Meter 600A,True RMS AC and DC clamp meter with temperature.,79.99,Tools,Premium|Commercial,IN
+TAPE-FISH-100,Fish Tape 100 ft,Steel fish tape for pulling wire through conduit.,21.00,Tools,Heavy Duty,IN
+GLOVE-CLASS0,Insulated Gloves Class 0,"Rubber insulating gloves rated 1000V, class 0.",58.00,Safety,Premium|Heavy Duty|Commercial,IN
+GLASS-SAFE,Safety Glasses Clear,"Anti fog clear safety glasses, ANSI Z87 rated.",3.25,Safety,Sale|Residential|Commercial,IN
