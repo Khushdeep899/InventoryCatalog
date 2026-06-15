@@ -1,105 +1,121 @@
-# InventoryCatalog
+# Product Catalog
 
-A small Django catalog of products, categories, and tags with a search and filter
-page. Search matches a product name or description, results can be filtered by
-category and by one or more tags (a product must carry every selected tag), and all
-of these combine. A read-only JSON endpoint exposes the same filtered data, and a
-management command ingests supplier price files (CSV) into the catalog.
+A Django product catalog with search and filtering. You can search by name or
+description, filter by category, filter by one or more tags (a product has to have
+all the tags you pick), and use those together.
 
-## Tech stack
+> Beyond what the assignment required, I also added a read-only JSON endpoint and a
+> CSV import command. Those two are extras, not part of the spec.
 
-- Python 3.12, Django 5.2
-- SQLite (zero setup)
-- Django templates for the front end
+## Stack
 
-## Quickstart
+- Python 3.12
+- Django 5.2
+- SQLite
+
+## Setup
 
 ```bash
+# clone
+git clone https://github.com/Khushdeep899/InventoryCatalog.git
+cd InventoryCatalog
+
+# virtualenv
 python3.12 -m venv venv
-source venv/bin/activate
-python -m pip install -r requirements.txt
+source venv/bin/activate          # Windows: venv\Scripts\activate
+
+# install
+pip install -r requirements.txt
+
+# database, sample data, and a test admin login
 python manage.py migrate
-python manage.py loaddata sample_data       # load the sample catalog
+python manage.py loaddata sample_data admin_user
+```
+
+Run it:
+
+```bash
 python manage.py runserver
 ```
 
-Open http://127.0.0.1:8000/ for the catalog and
-http://127.0.0.1:8000/api/products/ for the JSON feed.
+- App: http://127.0.0.1:8000/
+- JSON: http://127.0.0.1:8000/api/products/
+- Admin: http://127.0.0.1:8000/admin/
 
-To browse or edit data in the admin:
+The `admin_user` fixture loads a test admin account, so you can log into the admin
+at http://127.0.0.1:8000/admin/ straight away:
 
-```bash
-python manage.py createsuperuser
-# then visit http://127.0.0.1:8000/admin/
-```
+- username: `admin`
+- password: `admin12345`
 
-## Running the tests
+It's a throwaway account just for reviewing this project. To make your own instead,
+run `python manage.py createsuperuser`.
+
+## Tests
 
 ```bash
 python manage.py test
 ```
 
-## Data model
+## How the filtering works
 
-- **Category**: a grouping for products. A product belongs to at most one category.
-- **Tag**: a label that can be applied to many products.
-- **Product**: a catalog item with a unique `product_number` (its natural key), a
-  name, a description, a price, a stock status (in stock, backorder, or
-  discontinued), one optional category, and many tags.
+Search is a case-insensitive match on the product name and description. Category is
+an exact match. Tags use AND, so a product only shows if it has every tag you
+selected.
 
-Deleting a category sets its products' category to null (`on_delete=SET_NULL`)
-rather than deleting the products, so catalog entries are never lost when a
-category is removed.
+The tag filter is the part I'd point at in a review. Instead of filtering once per
+tag in a loop, it's one query that counts how many of the selected tags each product
+has and keeps the ones where that count equals the number you picked. The list also
+uses select_related for the category and prefetch_related for the tags, so adding
+more products doesn't add more queries per product.
 
-## How filtering works
+The HTML page and the JSON endpoint both go through the same `filtered_products()`
+function, so they always filter the same way.
 
-- Search is a case-insensitive match against the product name and description.
-- Category filtering is an exact match on the selected category.
-- Tag filtering uses AND semantics: a product is shown only if it carries every
-  selected tag. This is implemented as one annotated query (a count of matched tags
-  filtered down to those equal to the number requested), not a per-tag loop.
-- The queryset uses `select_related` for the category and `prefetch_related` for
-  the tags, so the page and API render with a fixed number of queries regardless of
-  how many products are shown.
+## Loading a supplier price file
 
-The HTML view and the JSON API share a single `filtered_products` helper, so both
-apply identical filtering.
-
-## Importing a supplier price file
-
-A management command ingests a supplier price file (CSV) into the catalog:
+There's a management command that reads a CSV price file into the catalog:
 
 ```bash
 python manage.py import_catalog sample_data/supplier_pricefile.csv
 ```
 
-The import is idempotent on `product_number`: re-running the same file updates
-products in place instead of creating duplicates, so a re-sent feed never doubles
-the catalog. Categories and tags named in the feed are created on demand (tags are
-pipe-delimited, for example `LED|Outdoor|Sale`), a malformed row is skipped and
-reported instead of failing the whole batch, and the command prints a
-`created/updated/skipped` summary at the end.
+It matches rows on `product_number` and updates in place, so running the same file
+twice won't create duplicates. Categories and tags from the file are created if they
+don't already exist (tags are pipe-separated, like `LED|Outdoor|Sale`). If a row is
+broken, say the price isn't a number, it gets skipped and reported instead of
+stopping the whole import, and you get a `created/updated/skipped` count at the end.
 
-## Configuration
+## Models
 
-Settings read from environment variables with development fallbacks, so no real
-secret is committed. See `.env.example`. For production set `DJANGO_SECRET_KEY`,
-`DJANGO_DEBUG=False`, and `DJANGO_ALLOWED_HOSTS`.
+- Category: a product belongs to at most one. Deleting a category keeps its products
+  but clears their category (`on_delete=SET_NULL`), so products aren't lost when a
+  category goes away.
+- Tag: many-to-many with products.
+- Product: has a unique `product_number` (the natural key the import matches on), a
+  name, a description, a price, a stock status (in stock, backorder, or
+  discontinued), one category, and any number of tags.
 
-## Assumptions and notes
+## Sample data
 
-- Sample data was created through the Django admin and exported as a fixture
-  (`products/fixtures/sample_data.json`) so the project ships with reproducible
-  data that loads in one command. The same catalog can also be ingested from the
-  sample supplier price file with
-  `python manage.py import_catalog sample_data/supplier_pricefile.csv`.
-- Slugs for categories and tags are generated from the name on save. Two names that
-  slugify to the same value would collide on the unique constraint; a production
-  version would append a numeric suffix.
-- Styling is intentionally minimal, since the brief states design is not graded.
+The fixture at `products/fixtures/sample_data.json` has 8 categories, 15 tags, and
+24 products (electrical supply parts). I entered it through the Django admin and
+dumped it to the fixture so it loads in one command. `db.sqlite3` isn't committed.
+
+## Config
+
+Secret key, debug, and allowed hosts are read from environment variables with dev
+defaults, so there's no real secret in the repo. See `.env.example`. For production
+set `DJANGO_SECRET_KEY`, `DJANGO_DEBUG=False`, and `DJANGO_ALLOWED_HOSTS`.
+
+## Notes
+
+- Styling is minimal on purpose. The assignment says design isn't graded.
+- Slugs for categories and tags come from the name automatically. Two names that
+  slugify to the same string would clash on the unique constraint. I left that as is
+  for the take-home, a real version would add a numeric suffix.
 
 ## AI usage
 
-I used AI tools as a coding assistant and reference while building this project.
-All code was written, reviewed, and is fully understood by me, and I can explain
-any part of the implementation.
+I used AI as an assistant while building this: looking things up in the Django docs,
+drafting the sample product data, and help with comments and this README. 
