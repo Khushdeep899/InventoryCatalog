@@ -242,11 +242,12 @@
   "pk": 1,
   "fields": {
     "created_at": "2026-06-15T05:07:00.516Z",
-    "updated_at": "2026-06-15T05:07:00.516Z",
+    "updated_at": "2026-06-15T10:04:36.391Z",
     "product_number": "LED-A19-09",
     "name": "LED A19 Bulb 9W",
     "description": "Warm white dimmable LED bulb for residential fixtures.",
     "price": "4.99",
+    "stock_status": "IN",
     "category": 1,
     "tags": [
       11,
@@ -261,11 +262,12 @@
   "pk": 2,
   "fields": {
     "created_at": "2026-06-15T05:07:00.518Z",
-    "updated_at": "2026-06-15T05:07:00.518Z",
+    "updated_at": "2026-06-15T10:04:36.394Z",
     "product_number": "LED-FLOOD-30",
     "name": "LED Flood Light 30W",
     "description": "Outdoor weatherproof LED flood light with a wide beam.",
     "price": "24.50",
+    "stock_status": "IN",
     "category": 1,
     "tags": [
       9,
@@ -280,11 +282,12 @@
   "pk": 3,
   "fields": {
     "created_at": "2026-06-15T05:07:00.519Z",
-    "updated_at": "2026-06-15T05:07:00.519Z",
+    "updated_at": "2026-06-15T10:04:36.395Z",
     "product_number": "TUBE-T8-18",
     "name": "T8 LED Tube 18W",
     "description": "Four foot T8 LED replacement tube for shop fixtures.",
     "price": "8.75",
+    "stock_status": "DC",
     "category": 1,
     "tags": [
       9,
@@ -299,11 +302,12 @@
   "pk": 4,
   "fields": {
     "created_at": "2026-06-15T05:07:00.520Z",
-    "updated_at": "2026-06-15T05:07:00.520Z",
+    "updated_at": "2026-06-15T10:04:36.397Z",
     "product_number": "HIGHBAY-150",
     "name": "LED High Bay 150W",
     "description": "Warehouse high bay fixture, 150 watt, daylight white.",
     "price": "89.00",
+    "stock_status": "BO",
     "category": 1,
     "tags": [
       9,
@@ -317,11 +321,12 @@
   "pk": 5,
   "fields": {
     "created_at": "2026-06-15T05:07:00.522Z",
-    "updated_at": "2026-06-15T05:07:00.522Z",
+    "updated_at": "2026-06-15T10:04:36.399Z",
     "product_number": "THHN-12-BLK",
     "name": "THHN Wire 12 AWG Black",
     "description": "Stranded copper THHN building wire, 500 foot spool.",
     "price": "95.00",
+    "stock_status": "IN",
     "category": 2,
     "tags": [
       5,
@@ -335,11 +340,12 @@
   "pk": 6,
   "fields": {
     "created_at": "2026-06-15T05:07:00.523Z",
-    "updated_at": "2026-06-15T05:07:00.523Z",
+    "updated_at": "2026-06-15T10:04:36.400Z",
     "product_number": "THHN-10-RED",
     "name": "THHN Wire 10 AWG Red",
     "description": "Stranded copper THHN building wire, 500 foot spool.",
     "price": "142.00",
+    "stock_status": "IN",
     "category": 2,
     "tags": [
       9,
@@ -353,11 +359,12 @@
   "pk": 7,
   "fields": {
     "created_at": "2026-06-15T05:07:00.525Z",
-    "updated_at": "2026-06-15T05:07:00.525Z",
+    "updated_at": "2026-06-15T10:04:36.403Z",
     "product_number": "UF-12-2",
     "name": "UF-B Cable 12/2",
     "description": "Underground feeder cable for outdoor burial runs.",
     "price": "168.00",
+    "stock_status": "IN",
     "category": 2,
     "tags": [
       5,
@@ -371,11 +378,12 @@
   "pk": 8,
   "fields": {
     "created_at": "2026-06-15T05:07:00.526Z",
-    "updated_at": "2026-06-15T05:07:00.526Z",
+    "updated_at": "2026-06-15T10:04:36.405Z",
     "product_number": "SER-2-2-4",
     "name": "SER Aluminum 2-2-2-4",
     "description": "Aluminum service entrance cable for panel feeds.",
     "price": "210.00",
+    "stock_status": "BO",
     "category": 2,
     "tags": [
       6,
@@ -389,11 +397,12 @@
   "pk": 9,
   "fields": {
     "created_at": "2026-06-15T05:07:00.527Z",
-    "updated_at": "2026-06-15T05:07:00.527Z",
+    "updated_at": "2026-06-15T10:04:36.407Z",
     "product_number": "EMT-12-10",
     "name": "EMT Conduit 1/2 inch",
     "description": "Electrical metallic tubing, 10 foot stick.",
     "price": "6.20",
+    "stock_status": "IN",
     "category": 3,
     "tags": [
       9,
@@ -406,11 +415,12 @@
   "pk": 10,
   "fields": {
     "created_at": "2026-06-15T05:07:00.529Z",
-    "updated_at": "2026-06-15T05:07:00.529Z",
+    "updated_at": "2026-06-15T10:04:36.408Z",
     "product_number": "PVC-34-SCH40",
     "name": "PVC Conduit 3/4 inch",
     "description": "Schedule 40 PVC conduit for outdoor and burial use.",
     "price": "4.85",
+    "stock_status": "IN",
     "category": 3,
     "tags": [
       2,
@@ -423,11 +433,12 @@
   "pk": 11,
   "fields": {
     "created_at": "2026-06-15T05:07:00.530Z",
-    "updated_at": "2026-06-15T05:07:00.530Z",
+    "updated_at": "2026-06-15T10:04:36.409Z",
     "product_number": "CONN-EMT-12",
     "name": "EMT Connector 1/2 inch",
     "description": "Set screw connector for half inch EMT conduit.",
     "price": "0.79",
+    "stock_status": "IN",
     "category": 3,
     "tags": [
       9,
@@ -440,11 +451,12 @@
   "pk": 12,
   "fields": {
     "created_at": "2026-06-15T05:07:00.531Z",
-    "updated_at": "2026-06-15T05:07:00.531Z",
+    "updated_at": "2026-06-15T10:04:36.411Z",
     "product_number": "STRUT-12",
     "name": "Strut Channel 12 ga",
     "description": "Slotted galvanized strut channel, 10 foot, heavy gauge.",
     "price": "18.40",
+    "stock_status": "IN",
     "category": 3,
     "tags": [
       9,
@@ -458,11 +470,12 @@
   "pk": 13,
   "fields": {
     "created_at": "2026-06-15T05:07:00.532Z",
-    "updated_at": "2026-06-15T05:07:00.532Z",
+    "updated_at": "2026-06-15T10:04:36.413Z",
     "product_number": "BOX-1G-METAL",
     "name": "1-Gang Metal Box",
     "description": "Single gang steel switch box, 3 inch deep.",
     "price": "1.45",
+    "stock_status": "IN",
     "category": 4,
     "tags": [
       1,
@@ -475,11 +488,12 @@
   "pk": 14,
   "fields": {
     "created_at": "2026-06-15T05:07:00.534Z",
-    "updated_at": "2026-06-15T05:07:00.534Z",
+    "updated_at": "2026-06-15T10:04:36.414Z",
     "product_number": "BOX-WP-2G",
     "name": "Weatherproof 2-Gang Box",
     "description": "Outdoor weatherproof box with a foam gasket.",
     "price": "7.95",
+    "stock_status": "IN",
     "category": 4,
     "tags": [
       9,
@@ -493,11 +507,12 @@
   "pk": 15,
   "fields": {
     "created_at": "2026-06-15T05:07:00.535Z",
-    "updated_at": "2026-06-15T05:07:00.535Z",
+    "updated_at": "2026-06-15T10:04:36.415Z",
     "product_number": "NEMA-12-ENC",
     "name": "NEMA 12 Enclosure",
     "description": "Industrial wall mount enclosure, powder coated steel.",
     "price": "64.00",
+    "stock_status": "BO",
     "category": 4,
     "tags": [
       9,
@@ -511,11 +526,12 @@
   "pk": 16,
   "fields": {
     "created_at": "2026-06-15T05:07:00.537Z",
-    "updated_at": "2026-06-15T05:07:00.537Z",
+    "updated_at": "2026-06-15T10:04:36.417Z",
     "product_number": "JBOX-4SQ",
     "name": "4 inch Square Box",
     "description": "Steel 4 square junction box, 1-1/2 inch deep.",
     "price": "2.10",
+    "stock_status": "DC",
     "category": 4,
     "tags": [
       9,
@@ -528,11 +544,12 @@
   "pk": 17,
   "fields": {
     "created_at": "2026-06-15T05:07:00.538Z",
-    "updated_at": "2026-06-15T05:07:00.538Z",
+    "updated_at": "2026-06-15T10:04:36.418Z",
     "product_number": "PLIER-LINE-9",
     "name": "Lineman Pliers 9 inch",
     "description": "High leverage side cutting lineman pliers.",
     "price": "32.00",
+    "stock_status": "IN",
     "category": 5,
     "tags": [
       7,
@@ -545,11 +562,12 @@
   "pk": 18,
   "fields": {
     "created_at": "2026-06-15T05:07:00.540Z",
-    "updated_at": "2026-06-15T05:07:00.540Z",
+    "updated_at": "2026-06-15T10:04:36.420Z",
     "product_number": "STRIP-AUTO",
     "name": "Automatic Wire Stripper",
     "description": "Self adjusting wire stripper for 10 to 24 AWG.",
     "price": "27.50",
+    "stock_status": "IN",
     "category": 5,
     "tags": [
       12,
@@ -562,11 +580,12 @@
   "pk": 19,
   "fields": {
     "created_at": "2026-06-15T05:07:00.541Z",
-    "updated_at": "2026-06-15T05:07:00.541Z",
+    "updated_at": "2026-06-15T10:04:36.422Z",
     "product_number": "MTR-CLAMP",
     "name": "Clamp Meter 600A",
     "description": "True RMS AC and DC clamp meter with temperature.",
     "price": "79.99",
+    "stock_status": "IN",
     "category": 5,
     "tags": [
       9,
@@ -579,11 +598,12 @@
   "pk": 20,
   "fields": {
     "created_at": "2026-06-15T05:07:00.543Z",
-    "updated_at": "2026-06-15T05:07:00.543Z",
+    "updated_at": "2026-06-15T10:04:36.425Z",
     "product_number": "TAPE-FISH-100",
     "name": "Fish Tape 100 ft",
     "description": "Steel fish tape for pulling wire through conduit.",
     "price": "21.00",
+    "stock_status": "IN",
     "category": 5,
     "tags": [
       7
@@ -595,11 +615,12 @@
   "pk": 21,
   "fields": {
     "created_at": "2026-06-15T05:07:00.544Z",
-    "updated_at": "2026-06-15T05:07:00.544Z",
+    "updated_at": "2026-06-15T10:04:36.426Z",
     "product_number": "GLOVE-CLASS0",
     "name": "Insulated Gloves Class 0",
     "description": "Rubber insulating gloves rated 1000V, class 0.",
     "price": "58.00",
+    "stock_status": "IN",
     "category": 6,
     "tags": [
       9,
@@ -613,11 +634,12 @@
   "pk": 22,
   "fields": {
     "created_at": "2026-06-15T05:07:00.545Z",
-    "updated_at": "2026-06-15T05:07:00.545Z",
+    "updated_at": "2026-06-15T10:04:36.428Z",
     "product_number": "GLASS-SAFE",
     "name": "Safety Glasses Clear",
     "description": "Anti fog clear safety glasses, ANSI Z87 rated.",
     "price": "3.25",
+    "stock_status": "IN",
     "category": 6,
     "tags": [
       9,
@@ -636,6 +658,7 @@
     "name": "Ground Rod 8 ft Copper",
     "description": "Copper clad steel ground rod, 5/8 inch by 8 foot.",
     "price": "18.75",
+    "stock_status": "IN",
     "category": 8,
     "tags": [
       9,
@@ -654,6 +677,7 @@
     "name": "Ground Clamp 1/2 in",
     "description": "Bronze ground clamp for half inch water pipe.",
     "price": "2.40",
+    "stock_status": "IN",
     "category": 8,
     "tags": [
       9,
