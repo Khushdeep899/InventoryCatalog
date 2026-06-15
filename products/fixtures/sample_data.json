@@ -66,6 +66,28 @@
   }
 },
 {
+  "model": "products.category",
+  "pk": 7,
+  "fields": {
+    "created_at": "2026-06-15T09:40:40.031Z",
+    "updated_at": "2026-06-15T09:40:40.031Z",
+    "name": "Fasteners",
+    "slug": "fasteners",
+    "description": "Anchors, screws, and mounting hardware."
+  }
+},
+{
+  "model": "products.category",
+  "pk": 8,
+  "fields": {
+    "created_at": "2026-06-15T09:41:04.405Z",
+    "updated_at": "2026-06-15T09:41:04.405Z",
+    "name": "Grounding & Bonding",
+    "slug": "grounding-bonding",
+    "description": "Ground rods, clamps, and bonding conductors."
+  }
+},
+{
   "model": "products.tag",
   "pk": 1,
   "fields": {
@@ -183,6 +205,36 @@
     "updated_at": "2026-06-15T05:07:00.514Z",
     "name": "Premium",
     "slug": "premium"
+  }
+},
+{
+  "model": "products.tag",
+  "pk": 13,
+  "fields": {
+    "created_at": "2026-06-15T09:41:58.503Z",
+    "updated_at": "2026-06-15T09:41:58.503Z",
+    "name": "Bulk",
+    "slug": "bulk"
+  }
+},
+{
+  "model": "products.tag",
+  "pk": 14,
+  "fields": {
+    "created_at": "2026-06-15T09:42:07.613Z",
+    "updated_at": "2026-06-15T09:42:07.613Z",
+    "name": "Contractor Pack",
+    "slug": "contractor-pack"
+  }
+},
+{
+  "model": "products.tag",
+  "pk": 15,
+  "fields": {
+    "created_at": "2026-06-15T09:42:17.060Z",
+    "updated_at": "2026-06-15T09:42:17.061Z",
+    "name": "New Arrival",
+    "slug": "new-arrival"
   }
 },
 {
@@ -571,6 +623,42 @@
       9,
       8,
       10
+    ]
+  }
+},
+{
+  "model": "products.product",
+  "pk": 23,
+  "fields": {
+    "created_at": "2026-06-15T09:43:36.914Z",
+    "updated_at": "2026-06-15T09:43:36.914Z",
+    "product_number": "GRD-ROD-8",
+    "name": "Ground Rod 8 ft Copper",
+    "description": "Copper clad steel ground rod, 5/8 inch by 8 foot.",
+    "price": "18.75",
+    "category": 8,
+    "tags": [
+      9,
+      5,
+      7
+    ]
+  }
+},
+{
+  "model": "products.product",
+  "pk": 24,
+  "fields": {
+    "created_at": "2026-06-15T09:45:01.059Z",
+    "updated_at": "2026-06-15T09:45:01.059Z",
+    "product_number": "GRD-CLAMP-12",
+    "name": "Ground Clamp 1/2 in",
+    "description": "Bronze ground clamp for half inch water pipe.",
+    "price": "2.40",
+    "category": 8,
+    "tags": [
+      9,
+      5,
+      15
     ]
   }
 }
